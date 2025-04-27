@@ -1,0 +1,364 @@
+/* ------------------ ESTILOS GENERALES ------------------ */
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f4f4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------ ANIMACIONES ------------------ */
+
+@keyframes slideFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+@keyframes slideFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+
+/* ------------------ HEADER ------------------ */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #005f73;
+    color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header h1, header p {
+    margin-left: 10px;
+    color: #f4f4f4;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+header p {
+    font-size: 1em;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+.nombre-titulo {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menú */
+.menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #0a9396;
+    transform: scale(1.05);
+    filter: brightness(1.05) drop-shadow(0 0 4px #0a9396);
+}
+
+/* ------------------ SOBRE MÍ ------------------ */
+#sobre-mi {
+    text-align: center;
+    padding-top: 160px;
+}
+
+#sobre-mi h2 {
+    margin-top: 0px;
+    margin-bottom: 0px; 
+}
+
+.contenedor-sobre-mi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+
+.mifoto {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 5px solid #0a9396;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: slideFromLeft 2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.texto-completo {
+    max-width: 500px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.texto-completo h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    animation: slideFromTop 2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.texto-completo p {
+    color: #102a43;
+    font-size: 1.2em;
+    margin-bottom: 20px; 
+    padding: 0;
+    animation: slideFromRight 2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.logos {
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    filter: brightness(1.05) drop-shadow(0 0 5px #0a9396);
+}
+
+
+
+/* ------------------ SECCIONES GENERALES ------------------ */
+section {
+    display: block;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    padding-top: 0;
+    margin-top: 100px;
+}
+
+
+section p {
+    color: #102a43;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 50px;
+}
+
+/* Títulos (h2 en general) */
+h2 {
+    display: inline-block;
+    background-color: #0a9396;
+    color: #f4f4f4;
+    font-size: 1.5em;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+
+/* ------------------ PROYECTOS ------------------ */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 0px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.proyecto {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.proyecto a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #005f73;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.proyecto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.card {
+    width: 100%;
+    aspect-ratio: 4/3; /* 🔥 Mantiene proporción 4:3 automáticamente */
+    perspective: 1000px;
+    margin: 0 auto;
+}
+
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* 🔥 Gira al pasar el mouse */
+}
+  
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la cara de atrás cuando no debe verse */
+  overflow: hidden;
+}
+
+/* Cara de adelante */
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+/* Cara de atrás */
+.card-back {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.card-back h6{
+    margin: 0;
+    padding: 10px;
+    background-color: #005f73;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-back p {
+    font-size: medium;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* ------------------ LISTAS Y PROYECTOS ------------------ */
+ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.list-item {
+    margin: 20px 0;
+}
+
+.list-item a {
+    text-decoration: none;
+    color: #005f73;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Imágenes dentro de listas */
+li img {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+

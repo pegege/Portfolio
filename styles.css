@@ -273,7 +273,7 @@ h2 {
 
 .card {
     width: 100%;
-    aspect-ratio: 4/3; /* 🔥 Mantiene proporción 4:3 automáticamente */
+    aspect-ratio: 4/3; 
     perspective: 1000px;
     margin: 0 auto;
 }
@@ -288,7 +288,7 @@ h2 {
 }
 
 .card:hover .card-inner {
-    transform: rotateY(180deg); /* 🔥 Gira al pasar el mouse */
+    transform: rotateY(180deg); 
 }
   
 
@@ -297,7 +297,7 @@ h2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* Oculta la cara de atrás cuando no debe verse */
+  backface-visibility: hidden; 
   overflow: hidden;
 }
 
@@ -317,6 +317,8 @@ h2 {
     transform: rotateY(180deg);
     font-size: 1.2em;
     text-align: center;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 .card-back h6{
@@ -333,6 +335,98 @@ h2 {
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.tech-logos{
+    margin-top: auto;
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech-logos img{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+
+/* ------------------ CONTACTO ------------------ */
+.contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenedor-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-contacto form input, 
+.contenedor-contacto form textarea {
+    width: calc(100% - 24px);    
+    padding: 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.contenedor-contacto form input:focus, 
+.contenedor-contacto form textarea:focus {
+    outline: none;
+    border-color: #0a9396;
+    box-shadow: 0 0 0 3px rgba(10, 147, 150, 0.1);
+}
+
+.contenedor-contacto form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contenedor-contacto form button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0a9396;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contenedor-contacto form button:hover {
+    background-color: #005f73;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-contacto form label {
+    font-weight: bold;
+    color: #102a43;
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+
+
 /* ------------------ LISTAS Y PROYECTOS ------------------ */
 ul {
     padding: 0;
